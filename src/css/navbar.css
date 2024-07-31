@@ -1,0 +1,161 @@
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  transition: background-color 0.3s ease;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.955);
+  backdrop-filter: blur(2px);
+}
+
+.navbar-brand img {
+  width: 160px;
+}
+
+.navbar-links {
+  display: flex; /* Flex para alineación horizontal */
+}
+
+.navbar-links a {
+  padding: 15px 26px;
+  transition: all 0.3s ease;
+}
+
+.navbarlink {
+  position: relative;
+}
+
+.navbarlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbarlink:hover::after {
+  width: 100%;
+}
+
+.navbar-contact a {
+  background-color: rgb(255, 98, 0);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 300ms ease;
+}
+
+.navbar-contact a:hover {
+  background-color: rgb(255, 128, 37);
+}
+
+.contact a {
+  display: none;
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Cambiar a "X" cuando el menú está activo */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 5px); /* Rotar y mover */
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0; /* Ocultar la barra del medio */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px); /* Rotar y mover */
+}
+
+/* Media Queries para responsive */
+@media (max-width: 980px) {
+  .navbar-links a {
+    font-size: 18px;
+  }
+
+  .navbar-contact a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 840px) {
+  .navbar-links a {
+    font-size: 15px;
+  }
+
+  .navbar-contact a {
+    font-size: 15px;
+  }
+
+  .navbar-brand img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact a {
+    display: block;
+  }
+
+  .navbar-contact a {
+    display: none;
+  }
+
+  .navbar-links a {
+    font-size: 18px;
+  }
+
+  .navbar-links {
+    display: none; /* Oculto por defecto en pantallas pequeñas */
+    flex-direction: column; /* Cambiar a columna */
+    position: absolute;
+    top: 60px; /* Debajo del navbar */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+  }
+
+  .navbar-links.open {
+    display: flex; /* Mostrar cuando está abierto */
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostrar el menú hamburguesa */
+  }
+
+  .navbar {
+    justify-content: space-around; /* Alinear elementos */
+  }
+}
