@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <Banner />
       <AboutUs />
-      <Schedules />
-      <Supplements />
-      <Footer />
+      {/* <Schedules /> */}
+      {/* <Supplements /> */}
+      {/* <Footer /> */}
     </>
   );
 }

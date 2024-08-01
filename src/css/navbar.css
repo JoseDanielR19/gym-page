@@ -110,6 +110,11 @@ a {
 }
 
 @media (max-width: 840px) {
+  .navbar {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
   .navbar-links a {
     font-size: 16px;
   }

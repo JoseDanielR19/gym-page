@@ -44,6 +44,7 @@ export const AboutUs = () => {
             <img src="src/assets/img/IMG_20240719_134953.jpg" alt="img" />
           </div>
         </div>
+        <div className="cap-about"></div>
       </div>
     </>
   );
