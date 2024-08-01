@@ -45,3 +45,92 @@
   height: 100vh;
   object-fit: cover;
 }
+
+/* Media Queries para responsive */
+@media (max-width: 890px) {
+  .schedules {
+    width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .img-background img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .schedule-card {
+    padding: 5px 15px;
+    margin: 10px 10px;
+  }
+}
+
+@media (max-width: 530px) {
+  .schedule-card {
+    padding: 0px 10px;
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 510px) {
+  .schedule-card {
+    width: 150px;
+    padding: 10px 20px;
+    margin: 5px 15px;
+  }
+}
+
+@media (max-width: 470px) {
+  .schedule-card {
+    width: 140px;
+    padding: 10px 20px;
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .schedule-card {
+    width: 130px;
+    padding: 10px 20px;
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .schedule-card {
+    padding: 10px 24px;
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .schedule-card {
+    padding: 5px 20px;
+  }
+}
+
+@media (max-width: 410px) {
+  .schedule-card {
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 410px) {
+  .schedule-card {
+    padding: 5px 10px;
+  }
+
+  .schedule-card h2 {
+    font-size: 20px;
+  }
+
+  .schedule-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .schedule-card {
+    padding: 5px 9px;
+  }
+}
