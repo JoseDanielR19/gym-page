@@ -13,20 +13,24 @@ export const Banner = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
+      const screenWidth = window.innerWidth;
+
       setRotationX(scrollY / 116);
 
-      if (scrollY > 0 && scrollY <= 729) {
-        setPosition(-scrollY / 2);
-      } else if (scrollY > 729 && scrollY <= 1459.199951171875) {
-        const progress = (scrollY - 729) / (1459.199951171875 - 729);
-        const newPosition = -364.4 + progress * 730;
-        setPosition(newPosition);
-      } else if (scrollY > 1459.199951171875) {
-        const progress =
-          (scrollY - 1459.199951171875) /
-          (2188.800048828125 - 1459.199951171875);
-        const newPosition = 364.4 - progress * 730;
-        setPosition(newPosition);
+      if (screenWidth > 750) {
+        if (scrollY > 0 && scrollY <= 729) {
+          setPosition(-scrollY / 2);
+        } else if (scrollY > 729 && scrollY <= 1459.199951171875) {
+          const progress = (scrollY - 729) / (1459.199951171875 - 729);
+          const newPosition = -364.4 + progress * 730;
+          setPosition(newPosition);
+        } else if (scrollY > 1459.199951171875) {
+          const progress =
+            (scrollY - 1459.199951171875) /
+            (2188.800048828125 - 1459.199951171875);
+          const newPosition = 364.4 - progress * 730;
+          setPosition(newPosition);
+        }
       }
 
       if (scrollY > 2192.800048828125) {

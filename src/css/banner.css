@@ -42,14 +42,6 @@
 
 .text-intro h1 {
   font-size: 4rem;
-  background: -webkit-linear-gradient(
-    45deg,
-    #ffffff,
-    #ffffff
-  ); /* Gradiente de texto */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeInDown 1s ease-in-out;
   width: 900px;
 }
 
@@ -70,5 +62,35 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Queries para responsive */
+@media (max-width: 850px) {
+  .text-intro h1 {
+    font-size: 3rem;
+    width: 500px;
+  }
+
+  .img-intro img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 570px) {
+  .text-intro h1 {
+    font-size: 2rem;
+    width: 400px;
+  }
+
+  .img-intro img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 470px) {
+  .text-intro h1 {
+    font-size: 30px;
+    width: 300px;
   }
 }

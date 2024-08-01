@@ -87,7 +87,7 @@ a {
 
 /* Cambiar a "X" cuando el menú está activo */
 .menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 5px); /* Rotar y mover */
+  transform: rotate(45deg) translate(6px, 6px); /* Rotar y mover */
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -111,11 +111,11 @@ a {
 
 @media (max-width: 840px) {
   .navbar-links a {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .navbar-contact a {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .navbar-brand img {
@@ -157,5 +157,9 @@ a {
 
   .navbar {
     justify-content: space-around; /* Alinear elementos */
+  }
+
+  .navbar-brand img {
+    width: 120px;
   }
 }
