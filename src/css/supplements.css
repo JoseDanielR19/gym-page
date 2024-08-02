@@ -99,7 +99,6 @@
   outline: none;
   cursor: pointer;
   z-index: 1;
-  right: 10px;
   background-color: transparent;
   border: none;
 }
@@ -112,11 +111,49 @@
   outline: none;
   cursor: pointer;
   z-index: 1;
-  right: 10px;
   background-color: transparent;
   border: none;
 }
 
 .left-arrow img {
   width: 65px;
+}
+
+/* Media Queries para responsive */
+@media (max-width: 500px) {
+  .supplement-card {
+    padding: 20px 15px;
+    border: solid 3px white;
+    margin: 20px 0px;
+  }
+
+  .supplement-card h3 {
+    font-size: 16px;
+  }
+
+  .supplement-card p {
+    font-size: 16px;
+  }
+
+  .supplement-card a img {
+    font-size: 16px;
+  }
+
+  .right-arrow img {
+    width: 45px;
+  }
+
+  .left-arrow img {
+    width: 45px;
+  }
+
+  .carousel-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+  }
 }

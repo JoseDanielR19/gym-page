@@ -15,30 +15,64 @@ export const Banner = () => {
       const scrollY = window.scrollY;
       const screenWidth = window.innerWidth;
 
-      setRotationX(scrollY / 116);
+      // Handle rotationX based on screen width
+      const rotationFactors = {
+        375: 106,
+        390: 135,
+        412: 145,
+        414: 143,
+        430: 147,
+        540: 114,
+      };
 
-      if (screenWidth > 750) {
+      setRotationX(scrollY / (rotationFactors[screenWidth] || 116));
+
+      // Handle position based on scrollY and screenWidth
+      if (screenWidth > 800) {
         if (scrollY > 0 && scrollY <= 729) {
           setPosition(-scrollY / 2);
         } else if (scrollY > 729 && scrollY <= 1459.199951171875) {
           const progress = (scrollY - 729) / (1459.199951171875 - 729);
-          const newPosition = -364.4 + progress * 730;
-          setPosition(newPosition);
+          setPosition(-364.4 + progress * 730);
         } else if (scrollY > 1459.199951171875) {
           const progress =
             (scrollY - 1459.199951171875) /
             (2188.800048828125 - 1459.199951171875);
-          const newPosition = 364.4 - progress * 730;
-          setPosition(newPosition);
+          setPosition(364.4 - progress * 730);
         }
       }
 
+      // Handle isAbsolute based on scrollY and screenWidth
       if (scrollY > 2192.800048828125) {
         setIsAbsolute(true);
         setRotationX(0);
       } else {
         setIsAbsolute(false);
       }
+
+      if (scrollY <= 2224) {
+        setIsAbsolute(false);
+      }
+
+      const screenConditions = [
+        { width: 375, minScroll: 2006, maxScroll: 2006 },
+        { width: 414, minScroll: 2192, maxScroll: 2692 },
+        { width: 390, minScroll: 2196, maxScroll: 2536 },
+        { width: 430, minScroll: 2100, maxScroll: 2800 },
+        { width: 412, minScroll: 2184, maxScroll: 2750 },
+      ];
+
+      screenConditions.forEach(({ width, minScroll, maxScroll }) => {
+        if (screenWidth === width) {
+          if (scrollY >= minScroll) {
+            setIsAbsolute(false);
+            setRotationX(scrollY / (rotationFactors[width] || 116));
+          }
+          if (maxScroll && scrollY > maxScroll) {
+            setIsAbsolute(true);
+          }
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);

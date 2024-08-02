@@ -4,7 +4,15 @@ import { supplements } from "../../data/fakeDbSupplements";
 
 export const Supplements = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsToShow = 3;
+  const screenWidth = window.innerWidth;
+  let itemsToShow = 3;
+
+  if (screenWidth <= 1060) {
+    itemsToShow = 2;
+  }
+  if (screenWidth <= 768) {
+    itemsToShow = 1;
+  }
 
   const nextSet = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % supplements.length);

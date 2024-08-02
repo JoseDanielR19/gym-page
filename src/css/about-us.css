@@ -159,6 +159,10 @@ html {
 }
 
 @media (max-width: 400px) {
+  .container-about {
+    margin-top: 50px;
+  }
+
   .images img {
     width: 130px;
     height: 230px;
