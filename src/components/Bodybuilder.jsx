@@ -4,7 +4,7 @@
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 
 export function Bodybuilder({ rotation }) {
-  const { nodes, materials } = useGLTF("public/bodybuilder.gltf");
+  const { nodes, materials } = useGLTF("bodybuilder.gltf");
   return (
     <group dispose={null} rotation={rotation}>
       <group scale={0.01} position={[0, 0, 0]}>
