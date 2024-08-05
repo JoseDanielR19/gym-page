@@ -6,10 +6,12 @@
 
 .bodybuilder.fixed {
   position: fixed;
+  top: 0;
 }
 
 .bodybuilder.absolute {
   position: absolute;
+  left: 0;
 }
 
 .banner {
