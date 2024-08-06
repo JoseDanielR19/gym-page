@@ -91,7 +91,7 @@ export const Banner = () => {
           <h1>Lleva tu rendimiento al siguiente nivel con Tivenfit</h1>
         </div>
         <div className="img-intro">
-          <img src="src/assets/img/Tiven.png" alt="Logo" />
+          <img src="img/Tiven.png" alt="Logo" />
         </div>
       </div>
       <div

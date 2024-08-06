@@ -38,10 +38,10 @@ export const AboutUs = () => {
             <p>Entrenador deportivo</p>
           </div>
           <div className="images" ref={imagesRef}>
-            <img src="src/assets/img/IMG_20240719_134756.jpg" alt="img" />
-            <img src="src/assets/img/PSX_20240719_135448.jpg" alt="img" />
-            <img src="src/assets/img/IMG_20240719_134719.jpg" alt="img" />
-            <img src="src/assets/img/IMG_20240719_134953.jpg" alt="img" />
+            <img src="img/IMG_20240719_134756.jpg" alt="img" />
+            <img src="img/PSX_20240719_135448.jpg" alt="img" />
+            <img src="img/IMG_20240719_134719.jpg" alt="img" />
+            <img src="img/IMG_20240719_134953.jpg" alt="img" />
           </div>
         </div>
         <div className="cap-about"></div>

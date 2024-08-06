@@ -42,7 +42,7 @@ export const Supplements = () => {
         </div>
         <div className="carousel-container">
           <button className="left-arrow" onClick={prevSet}>
-            <img src="src\assets\arrow-left.svg" alt="arrow-left" />
+            <img src="icons/arrow-left.svg" alt="arrow-left" />
           </button>
           <div className="carousel">
             {getCurrentItems().map((supplement) => (
@@ -51,20 +51,20 @@ export const Supplements = () => {
                 <h3>{supplement.name}</h3>
                 <p>$ {supplement.price}</p>
                 <a href="#">
-                  <img src="src/assets/whatsapp.svg" alt="whatsapp" />
+                  <img src="icons/whatsapp.svg" alt="whatsapp" />
                   Comprar
                 </a>
               </div>
             ))}
           </div>
           <button className="right-arrow" onClick={nextSet}>
-            <img src="src\assets\arrow-right.svg" alt="arrow-right" />
+            <img src="icons/arrow-right.svg" alt="arrow-right" />
           </button>
         </div>
       </div>
       <div className="background-supplements" id="supplements">
         <div className="img-container">
-          <img src="src/assets/img/IMG_20240719_134953.png" alt="img" />
+          <img src="img/IMG_20240719_134953.png" alt="img" />
         </div>
       </div>
     </>

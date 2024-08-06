@@ -24,7 +24,7 @@ export const Schedules = () => {
       <div className="background-schedules" id="schedules">
         <div className="img-background">
           <img
-            src="src\assets\img\PSX_20240719_135448.png"
+            src="img/PSX_20240719_135448.png"
             alt="img-background"
           />
         </div>
