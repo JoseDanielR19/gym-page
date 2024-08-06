@@ -30,7 +30,7 @@ export const Navbar = () => {
       <div className="navbar">
         <div className="navbar-brand">
           <a href="#">
-            <img src="../../src/assets/img/Tiven.png" alt="logo" />
+            <img src="img/Tiven.png" alt="logo" />
           </a>
         </div>
         <div
