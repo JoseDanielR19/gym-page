@@ -33,7 +33,7 @@ export const Footer = () => {
             </p>
           </div>
           <div className="contact">
-            <h2>Contactame:</h2>
+            <h2>Contáctame:</h2>
             <div className="phone">
               <img src="icons/phone.svg" alt="phone" />
               <p>+57 321 4567890</p>

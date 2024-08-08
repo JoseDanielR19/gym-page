@@ -54,12 +54,12 @@ export const Navbar = () => {
           </a>
           <div className="contact">
             <a href="#" className="navbarlink">
-              Contactame
+              Contáctame
             </a>
           </div>
         </div>
         <div className="navbar-contact">
-          <a href="#">Contactame</a>
+          <a href="#">Contáctame</a>
         </div>
         <div
           className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
